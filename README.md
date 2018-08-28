@@ -3,7 +3,7 @@ Text mining thecniques applied in economic literature.
 
 This project aims to provide some templates for using text mining in economic literature. At a first glance, it's seems that the economy subject should not be specified in the project, due to the fact that the thecniques here shown can be used in any other kind of literature. Nonetheless, this kind of approach will be helpful for gathering a specific public (e.g: researchers in economics), who can provide thoroughly feedbacks and thoughts for attending that specific field of knowledge.
 
-At the beginning, I'll only use R but I'm willing to work with *Python* and *JS* (in the future) too. Maybe, due to some (shiny)[https://shiny.rstudio.com/tutorial/] issues/features (or maybe due to a lack of knowledge from my part LOL) there will be two or more repositories for *EconoMining* as I build more than one app for this project.
+At the beginning, I'll only use R but I'm willing to work with *Python* and *JS* (in the future) too. Maybe, due to some [shiny](https://shiny.rstudio.com/tutorial/) issues/features (or maybe due to a lack of knowledge from my part LOL) there will be two or more repositories for *EconoMining* as I build more than one app for this project.
 
 ## Wordclouds for Adam Smith's "Wealth of the Nations"
 
