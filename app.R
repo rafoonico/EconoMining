@@ -26,15 +26,15 @@ for(i in indexes[1:37]){
   new[[i]] <- page %>% html_nodes(".book-reader-content p") %>% html_text() %>% paste(collapse="")
 }
 
-#------------------------------------------------------------------ wordcloud
+#------------------------------------------------------------------ building the app
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a word cloud
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Wordclouds from Adam Smith's 'An Inquiry into the Nature and Causes of the Wealth of Nations (1776)' "),
+   titlePanel("Word clouds from Adam Smith's 'An Inquiry into the Nature and Causes of the Wealth of Nations (1776)' "),
    
-   # Sidebar with a slider input for number of bins 
+   # Sidebar with a slider input for number of words and radio buttons for choosing the chapter of the book 
    sidebarLayout(
       sidebarPanel(
          sliderInput("words",
@@ -85,7 +85,7 @@ ui <- fluidPage(
          
       ),
       
-      # Show a plot of the generated distribution
+      # Show a plot of the generated word cloud
       mainPanel(
          plotOutput("wordcloud", width = "100%", height = "800px")
       )
@@ -93,9 +93,10 @@ ui <- fluidPage(
    
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to draw a the word cloud
 server <- function(input, output) {
    
+#------------------------------------------------------------------ text mining
    output$wordcloud <- renderPlot({
      
      abstracts <- new[[input$chapter]]
@@ -105,6 +106,8 @@ server <- function(input, output) {
      
      dtm <- DocumentTermMatrix(abs_corpus)
      dtm2 <- as.matrix(dtm)
+
+#------------------------------------------------------------------ word cloud
      
      frequency <- colSums(dtm2) %>% sort(decreasing = TRUE)
      words <- names(frequency)
