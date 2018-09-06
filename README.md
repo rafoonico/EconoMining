@@ -11,4 +11,4 @@ This initial project it's a web scrapping from Adam Smith's  'An Inquiry into th
 
 `shiny::runGitHub("rafoonico/EconoMining","rafoonico")`
 
-And please be sure that you have these packages: `install.packages(c("shiny","rvest","magrittr","tm","wordcloud"))`
+And please be sure that you got these packages: `install.packages(c("shiny","rvest","magrittr","tm","wordcloud"))`
