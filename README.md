@@ -1,5 +1,5 @@
 # EconoMining
-Text mining thecniques applied in economic literature.
+Text mining techniques applied in economic literature.
 
 This project aims to provide some templates for using text mining in economic literature. At a first glance, it's seems that the economy subject should not be specified in the project, due to the fact that the thecniques here shown can be used in any other kind of literature. Nonetheless, this kind of approach will be helpful for gathering a specific public (e.g: researchers in economics), who can provide thoroughly feedbacks and thoughts for attending that specific field of knowledge.
 
